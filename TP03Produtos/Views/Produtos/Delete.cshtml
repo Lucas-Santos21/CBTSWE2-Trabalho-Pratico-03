@@ -1,0 +1,51 @@
+﻿@model TP03Produtos.Models.Produto
+
+@{
+    ViewData["Title"] = "Excluir produto";
+}
+@* //Nome e prontuário da dupla:
+//Lucas da Silva Santos CB3030598
+//Kaueh Farias Ferreira dos Santos CB3031438 *@
+
+<h1>Excluir produto</h1>
+
+<div class="alert alert-warning">
+    Tem certeza de que deseja excluir este produto?
+    Esta operação não poderá ser desfeita pela aplicação.
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h2 class="h4">@Model.Nome</h2>
+
+        <p class="mb-2">
+            <strong>Código:</strong> @Model.Id
+        </p>
+
+        <p class="mb-2">
+            <strong>Descrição:</strong> @Model.Descricao
+        </p>
+
+        <p class="mb-2">
+            <strong>Preço:</strong> @Model.Preco.ToString("C")
+        </p>
+
+        <p class="mb-0">
+            <strong>Estoque:</strong> @Model.QuantidadeEstoque
+        </p>
+    </div>
+</div>
+
+<form asp-action="Delete"
+      asp-route-id="@Model.Id"
+      method="post">
+
+    <button type="submit" class="btn btn-danger">
+        Confirmar exclusão
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+        Cancelar
+    </a>
+</form>

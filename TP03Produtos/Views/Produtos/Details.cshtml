@@ -1,0 +1,47 @@
+﻿@* //Nome e prontuário da dupla:
+//Lucas da Silva Santos CB3030598
+//Kaueh Farias Ferreira dos Santos CB3031438 *@
+
+@model TP03Produtos.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes do produto";
+}
+
+<h1>Detalhes do produto</h1>
+
+<hr />
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h2 class="card-title">@Model.Nome</h2>
+
+        <dl class="row mt-4">
+            <dt class="col-sm-4">Código</dt>
+            <dd class="col-sm-8">@Model.Id</dd>
+
+            <dt class="col-sm-4">Nome</dt>
+            <dd class="col-sm-8">@Model.Nome</dd>
+
+            <dt class="col-sm-4">Descrição</dt>
+            <dd class="col-sm-8">@Model.Descricao</dd>
+
+            <dt class="col-sm-4">Preço</dt>
+            <dd class="col-sm-8">@Model.Preco.ToString("C")</dd>
+
+            <dt class="col-sm-4">Quantidade em estoque</dt>
+            <dd class="col-sm-8">@Model.QuantidadeEstoque</dd>
+        </dl>
+
+        <a asp-action="Edit"
+           asp-route-id="@Model.Id"
+           class="btn btn-primary">
+            Editar
+        </a>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            Voltar à listagem
+        </a>
+    </div>
+</div>
