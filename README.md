@@ -10,9 +10,9 @@ Sistema de cadastro e gerenciamento de produtos, desenvolvido como parte do Trab
 - SQLite
 - Bootstrap
 
-## 💻 Requisitos
+## 💻 Requisitos 
 
-- Visual Studio 2026
+- Visual Studio
 - SDK .NET 10
 
 ## 🛠️ Executar
@@ -49,11 +49,6 @@ Sistema de cadastro e gerenciamento de produtos, desenvolvido como parte do Trab
 - `wwwroot/` — arquivos CSS, JavaScript e recursos estáticos da aplicação.
 - `Program.cs` — configuração dos serviços, do Entity Framework Core e do roteamento.
 - `appsettings.json` — configurações da aplicação e conexão com o banco de dados.
-
-## 📦 Entregáveis
-
-- Código-fonte completo da aplicação.
-- Vídeo demonstrando o funcionamento do sistema e suas funcionalidades.
 
 ## 👥 Autores (Dupla)
 
